@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const dotenv = require('dotenv')
 const app = express()
-const employees = require('./routes/apiRoutes')
+const employees = require('../routes/apiRoutes')
 
 dotenv.config()
 
