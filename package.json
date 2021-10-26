@@ -4,9 +4,9 @@
   "description": "api to connect joetwebdev.io to a database",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
 	"start": "vercel dev",
-    "deploy": "vercel deploy --prod"
+    "deploy": "vercel deploy --prod",
   },
   "author": "Theron Joe",
   "license": "ISC",
