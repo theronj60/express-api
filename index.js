@@ -28,7 +28,7 @@ app.use((err, req, res, next) => {
 	return
 })
 
-const port = process.env.SERVER_PORT
+const port = process.env.PORT
 
 app.listen(port, () => {
 	console.log(`Example app listening at http://localhost:${port}`)
