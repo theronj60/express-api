@@ -9,6 +9,13 @@ async function getEmployee() {
 	return employees
 }
 
+async function getEmployeeById(id) {
+	console.log(id)
+	const employee = await db.query('SELECT * FROM `Employees` WHERE id = ' + id)
+	return employee
+	}
+
 module.exports = {
-	getEmployee
+	getEmployee,
+	getEmployeeById
 }

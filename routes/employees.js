@@ -10,5 +10,14 @@ router.get('/', async function(req, res, next) {
 		next(err)
 	}
 })
+router.get('/:id', async function(req, res, next) {
+	try {
+		res.json(await service.getEmployeeById(req.params.id))
+	} catch (err) {
+		console.error(`Error while getting employee ${err.message}`)
+		next(err)
+	}
+})
 
 module.exports = router
+	
