@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const dotenv = require('dotenv')
 const app = express()
+const cors = require('cors')
 const employees = require('./routes/employees')
 
 dotenv.config()
@@ -18,8 +19,8 @@ app.get('/', (req, res) => {
 	res.json({'message': 'ok'})
 })
 
-app.use('/employees', employees)
-app.use('/employees/:id', employees)
+app.use('/employees', cors(), employees)
+app.use('/employees/:id', cors(), employees)
 
 app.use((err, req, res, next) => {
 	const statusCode = err.statusCode || 500
