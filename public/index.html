@@ -1,4 +1,28 @@
 <!DOCTYPE html>
+<style type="text/css" media="screen">
+.code {
+	background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+	max-width: 36em;
+    margin-bottom: 1.6em;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+.flex {
+	display: flex;
+}
+.flex > a {
+	margin: 0px 16px 0px 16px;
+}
+</style>
 <html>
 	<head>
 		<meta charset="UTF-8" />
@@ -8,9 +32,24 @@
 	<body>
 		<header>
 			<h1>Welcome</h1>
+			<h3>This is an API I built for my joetwebdev demo projects.</h3>
 		</header>
 		<main>
-			main content
+			<section>
+				<h4>Currents routes available are:</h4>	
+				<a href="http://www.demo.joetwebdev.io/employees" target="_blank">demo.joetwebdev.io/employees</a>
+				<p>This first route will return a data table with "employees". It will grab all employees in that table.</p>
+				<a href="http://www.demo.joetwebdev.io/employees?page=3&limit=15" target="_blank">demo.joetwebdev.io/employees?page=3&limit=15</a>
+				<p>A better option for grabing this data would be to include queries.</p>
+				<p>The query that is used is page and limit. Page will be the page number and limit will be how many employees to include in a page.</p>
+				<p>So an example would be: <span class="code">demo.joetwebdev.io/employees?page=1&limit=20</span></p>
+				<p>This would grab 20 entries for page 1. Page 2 would be the next 20 entries after the 1st page.</p>
+				<p>Feel free to take a look at the repo. Link below.</p>
+				<div class="flex">
+					<a href="https://github.com/theronj60/express-api" target="_blank">Github Repo</a>
+					<a href="https://joetwebdev.io/demo/table" target="_blank">joetwebdev Demo Table Project</a>
+				</div>
+			</section>
 		</main>
 	</body>
 </html>
