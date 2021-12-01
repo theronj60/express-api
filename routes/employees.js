@@ -29,5 +29,14 @@ router.get('/:id', async function(req, res, next) {
 	}
 })
 
+router.post('/create', async function(req, res, next) {
+	 try {
+	   res.json(await service.createEmployee(req.body));
+	 } catch (err) {
+	   console.error(`Error while creating employee`, err.message);
+	   next(err);
+	 }
+});
+
 module.exports = router
 	

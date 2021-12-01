@@ -21,6 +21,7 @@ app.get('/', (req, res) => {
 
 app.use('/employees', cors(), employees)
 app.use('/employees/:id', cors(), employees)
+app.use('/employees/create', cors(), employees)
 
 app.use((err, req, res, next) => {
 	const statusCode = err.statusCode || 500
